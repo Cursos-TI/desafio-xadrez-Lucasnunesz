@@ -1,35 +1,27 @@
 #include <stdio.h>
 
 int main() {
+    // Definindo as constantes para o movimento do cavalo
+    const int MOVIMENTO_BAIXO = 2;    // Duas casas para baixo
+    const int MOVIMENTO_ESQUERDA = 1; // Uma casa para esquerda
     
-    const int MOV_TORRE = 5;    
-    const int MOV_BISPO = 5;   
-    const int MOV_RAINHA = 8;   
-    int contador;              
+    // Variáveis para controle dos loops
+    int contador_baixo = 0;
+    int contador_esquerda = 0;
 
-    
-    printf("Movimento da Torre (5 casas para a direita):\n");
-    for (contador = 1; contador <= MOV_TORRE; contador++) {
-        printf("Direita\n");    
+    // Movimento para baixo usando loop for
+    for (contador_baixo = 0; contador_baixo < MOVIMENTO_BAIXO; contador_baixo++) {
+        printf("Baixo\n");  // Imprime a direção do movimento
     }
-    printf("\n");              
 
-    
-    printf("Movimento do Bispo (5 casas diagonal cima-direita):\n");
-    contador = 0;
-    while (contador < MOV_BISPO) {
-        printf("Cima, Direita\n");  
-        contador++;
+    // Linha em branco para separar os movimentos
+    printf("\n");
+
+    // Movimento para esquerda usando loop while
+    while (contador_esquerda < MOVIMENTO_ESQUERDA) {
+        printf("Esquerda\n");  // Imprime a direção do movimento
+        contador_esquerda++;
     }
-    printf("\n");              
-
-    
-    printf("Movimento da Rainha (8 casas para a esquerda):\n");
-    contador = 0;
-    do {
-        printf("Esquerda\n");   
-        contador++;
-    } while (contador < MOV_RAINHA);
 
     return 0;
 }
